@@ -4,7 +4,7 @@
 .app__header {
     position: relative;
     background-size: cover;
-    background-image:  linear-gradient(rgba(67, 74, 84 , 0.3 ),rgba(68, 75, 85 , 0.3 )),url('/img/cover.jpg');
+    background-image:  linear-gradient(rgba(67, 74, 84 , 0.3 ),rgba(68, 75, 85 , 0.3 ));
     background-position: top center;
     background-repeat: no-repeat;
 }
