@@ -1,0 +1,34 @@
+/* Reset CSS */
+:root {
+    --text-color : #fff;
+    --navbar-height: 104px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.btn {
+    display: block;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: #ccc;
+    color: var(--text-color);
+    padding: 12px 15px;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+
