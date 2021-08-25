@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+    
 }
 
 .header__navbar {
@@ -17,6 +18,7 @@
     background-color: rgba(0, 0, 0, 0.12);
     display: flex;
     align-items: center;
+    z-index: 10;
     
 }
 
@@ -50,6 +52,8 @@
 
 .navbar__item {
     padding: 25px 17px;
+    cursor: pointer;
+    position: relative;
     
 }
 
@@ -65,7 +69,89 @@
     display: block;
 }
 
-.navbar__item:last-child {
+.navbar__item:hover  .navbar__sub-list {
+    display: block;
+}
+
+/* sub navbar */
+@keyframes EaseIn {
+    from {
+        opacity: 0;
+        transform: scale(0)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.navbar__sub-list {
+    position: absolute;
+    display: none;
+    list-style: none;
+    top: 100%;
+    padding-left: 0;
+    box-shadow: 0 2px 2px 2px #dad7d7;
+    border-radius: 4px;
+    transform-origin: 0 0;
+    animation: EaseIn ease .3s;
+}
+
+.navbar__sub-item + .navbar__sub-item {
+    border-top: 1px solid #f1f1f1;
+    
+}
+
+
+.navbar__sub-item {
+    min-width: 200px;
+    display: block;
+    position: relative;
+    background-color: #fff;
+    padding: 15px 25px;
+}
+
+.navbar__sub-item:hover {
+    background-color: #f9f9f9;
+}
+
+.navbar__sub-item.navbar__sub-item-have-sub-list .navbar__sub-list {
+    display: none;
+}
+
+.navbar__sub-item.navbar__sub-item-have-sub-list:hover .navbar__sub-list {
+    display: block;
+    left: calc(100% + 25px);
+    top: 0;
+} 
+
+.navbar__sub-item.navbar__sub-item-have-sub-list:hover .navbar__sub-list:before {
+    content: "";
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 25px;
+    height: 100%;
+}
+
+.navbar__sub-link {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 2px;
+    color: #9a9a9a;
+
+}
+
+.navbar__sub-link i {
+    padding-left: 15px;
+    font-size: 1.6rem;
+    float: right;
 }
 
 .navbar__booking-btn {
@@ -74,6 +160,11 @@
     text-transform: uppercase;
     padding: 12px 15px 10px;
     margin-left: 12px;
+}
+
+.navbar__booking-btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg,rgba(243, 85, 204, 0.5) ,rgba(101, 85, 243, 0.5));
 }
 
 .navbar__menu {
@@ -171,4 +262,179 @@
 .cover__tour-type-img {
     width: 40px;
     height: 40px;
+}
+
+/* App Container */
+.app__container {
+
+}
+/* Destinations */
+
+.destinations {
+    
+}
+
+.destinations__header {
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 20px;
+}
+
+.destinations__header  .underline:after {
+    background-color: var(--green-color);
+}
+
+.destinations__title {
+    margin: 0;
+    padding: 12px 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #9a9a9a;
+    text-transform: uppercase;
+}
+
+.destinations__heading {
+    margin: 0;
+    padding: 12x 0;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #555555;
+}
+
+.destinations__package {    
+    padding: 15px 15px 60px 15px;
+
+}
+
+.destinations__package-item {
+    position: relative;
+    padding: 15px 0;
+}
+
+.destinations__package-img {
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
+    background-size: cover;
+    
+}
+
+.destinations__package-sticker {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    display: block;
+    width: 45px;
+}
+
+.destinations__package-info {
+    position: absolute;
+    bottom: 45px;
+    left: 45px;
+    text-shadow: 0 1px 1px 1px rgba(0, 0 ,0 ,0.5);
+}
+
+.destinations__package-title {
+    padding-bottom: 10px;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.destinations__package-quantity {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: normal;
+    padding: 0;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from  {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.destinations__package-item:hover .destinations__package-place{
+    opacity: 1;
+}
+
+
+.destinations__package-place {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 100%;
+    background-color: var(--blue-color);
+    display: block;
+    opacity: 0;
+    transition: opacity ease-in 0.5s;
+}
+
+.destinations__package-place-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.destinations__package-place-heading {
+    color: #fff;
+}
+
+.destinations__package-place-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+
+.destinations__package-place-item {
+    padding: 10px;
+}
+
+.destinations__package-place-link {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.destinations__package-place-button {
+    display: block;
+    padding: 8px 20px;
+    color: var(--blue-color);
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.destinations__package-place-button:hover {
+    opacity: 0.9;
 }
