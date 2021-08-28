@@ -79,3 +79,17 @@ html {
 .br-blue-color {
     background-color: #14B9D5 ;
 }
+
+.br-yellow-color {
+    background-color: #FFD205 ;
+}
+
+.br-purple-color {
+    background-color: var(--purple-color) ;
+}
+
+
+.green-color {
+    color: var(--green-color) !important;
+}
+
