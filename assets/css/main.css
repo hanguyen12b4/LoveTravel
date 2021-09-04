@@ -1,6 +1,8 @@
 
 /* Header */
-
+.app {
+    position: relative;
+}
 .app__header {
     position: relative;
     background-size: cover;
@@ -174,6 +176,7 @@
 
 .navbar__menu {
     padding: 0 15px;
+    cursor: pointer;
 }
 
 .navbar__menu-icon {
@@ -1026,4 +1029,183 @@
     line-height: 1.2rem;
     color: #fff;
     letter-spacing: 2px;
+}
+
+/* fixed icon */
+
+.app__fixed-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.fixed-icon__main {
+    position: relative;
+    font-size: 25px;
+    line-height: 25px;
+    padding: 21px 16px 17px;
+    border-radius: 100%;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    background-color: #555555;
+}
+
+.fixed-icon__sub-dollar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 8px;
+}
+
+.fixed-icon__sub {
+    position: absolute;
+    background-color: #555555;
+    border-radius: 100%;
+    left: -19px;
+    top: 29px;
+    padding: 3px 11px 7px;
+}
+
+.fixed-icon__sub-img {
+    width: 15px;
+}
+
+.fixed-icon__buy-now {
+    position: absolute;
+    width: fit-content;
+    background-color: #f76570;
+    text-transform: uppercase;
+    top: 0px;
+    left: 6px;
+    font-size: 8px;
+    letter-spacing: 1px;
+    line-height: 10px;
+    border-radius: 0px;
+    padding: 4px 5px;
+
+}
+
+/* Menu */
+
+.app__menu {
+    position: fixed;
+    display: block;
+    width: 350px;
+    height: 100%;
+    z-index: 999 ;
+    overflow-y: auto;
+    box-shadow: 0 0px 2px rgba(0, 0 ,0 ,0.5);
+    top: 0;
+    right: -350px;
+    background-color: #fff;
+    transition: right 0.8s ease;
+    
+}
+
+.app__menu.open {
+    right: 0;
+}
+
+.best-package + .best-package {
+    margin-top: 20px;
+}
+
+.app__menu-wrap {
+    position: relative;
+    padding: 20px;
+}
+
+.app__menu-wrap .destinations__package-item {
+    padding: 12px;
+}
+
+.app__menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.app__menu-close img {
+    width: 25px;
+    height: 25px;
+}
+.menu-content__heading {
+    text-align: center;
+}
+
+.menu-content__heading p{
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9a9a9a;
+}
+
+.menu-content__heading h3 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #555555;
+}
+
+.menu-content__heading h3:after {
+    z-index: -9;
+    background-color: var(--yellow-color);
+    top: -15px;
+}
+.app__menu-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.app__menu-item-img {
+    width: 100px;
+    height: 100px;
+}
+
+.app__menu-item {
+    display: flex;
+    padding: 15px;
+}
+
+.app__menu-info {
+    padding-left: 30px;
+}
+
+.app__menu-info-heading {
+    margin-top: 5px;
+}
+
+.app__menu-info-place {
+    padding: 10px 0;
+}
+
+.app__menu-info-btn {
+    padding: 6px 10px;
+    margin-top: 5px;
+}
+
+.app__menu-info-place img {
+    width: 15px;
+}
+
+.app__menu-info-place span {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+}
+
+
+.app__menu-info h3 {
+    font-size: 20px;
+    line-height: 20px;
+    color: #555555;
+    font-weight: normal;
+    margin: 0;
 }
