@@ -1,0 +1,124 @@
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .navbar__list {
+        justify-content: center;
+    }
+
+    
+
+}
+
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .navbar__list {
+        display: none;
+    }
+
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+
+    .header__navbar{
+        justify-content: space-between;
+        width: 100%;
+        background-color: #555555;
+        padding: 0 24px;
+    }
+
+    .cover__search {
+        width: 100%;
+    }
+
+    .cover__select {
+        width: 100%;
+    }
+
+    .cover__tour-type-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cover__tour-type-item {
+        margin: 0 15px 24px;
+    }
+
+    .best-place__book-info {
+        margin-bottom: 30px;
+    }
+
+    .package-place__content {
+        margin-bottom: 20px;
+    }
+
+    .moment-wrap {
+        padding: 60px 24px;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+
+}
+
+/* All device */
+@media (min-width: 740px) {
+    
+}
+
+/* Mobile */
+@media  (max-width: 739px) {
+    .cover__heading {
+        font-size: 4.0rem;
+        text-align: center;
+    }
+
+    .cover__sub-heading {
+        text-align: center;
+    }
+
+    .cover__search {
+        padding: 0 16px;
+    }
+
+    .destinations__heading {
+        text-align: center;
+    }
+
+    .destinations__heading {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-place__slider-times {
+        padding: 0;
+        bottom: -28px;
+    }
+
+    .best-place__slider-time-section {
+        padding: 12px;
+    }
+
+    .best-place__slider-time-value {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .destination-wrap {
+        padding: 0 12px;
+    }
+
+    .app__footer-input {
+        padding: 0 0 30px;
+    }
+
+    .app__footer-top {
+        padding: 0;
+    }
+
+    .app__footer-input input {
+        min-width: 200px;
+    }
+}
