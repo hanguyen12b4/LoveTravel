@@ -22,7 +22,6 @@
         justify-content: space-between;
         width: 100%;
         background-color: #555555;
-        padding: 0 24px;
     }
 
     .cover__search {
@@ -47,12 +46,50 @@
         margin-bottom: 30px;
     }
 
+    .best-place__slider {
+        padding: 0 12px;
+    }
+
+    .best-place__booking-item {
+        padding: 60px 0 20px;
+    }
+
+    .best-place__slider-img {
+        height: 250px;
+    }
+    
+    .best-place__slider-list {
+        padding: 0;
+    }
+
+    .best-place__slider-times {
+        bottom: -50px;
+    }
+
     .package-place__content {
         margin-bottom: 20px;
     }
 
     .moment-wrap {
         padding: 60px 24px;
+    }
+
+    .moment__title h1  {
+        font-size: 4.5rem;
+    }
+    
+    .app__footer-input {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .app__footer-top {
+        padding: 24px 14px;
+    }
+
+    .app__footer-input input {
+        width: 100%;
     }
 
 }
@@ -70,6 +107,20 @@
 
 /* Mobile */
 @media  (max-width: 739px) {
+
+    .navbar__logo-img {
+        width: 120px;
+    }
+
+    .header__navbar {
+        height: calc(var(--navbar-height) - 30px);
+    }
+
+    .header__cover {
+        width: 100%;
+        padding: 180px 0 130px;
+    }
+    
     .cover__heading {
         font-size: 4.0rem;
         text-align: center;
@@ -81,6 +132,15 @@
 
     .cover__search {
         padding: 0 16px;
+    }
+
+    .destination  {
+        padding: 30px 0;
+    }
+
+    .moment-btn .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .destinations__heading {
@@ -110,15 +170,20 @@
         padding: 0 12px;
     }
 
+
     .app__footer-input {
         padding: 0 0 30px;
     }
 
     .app__footer-top {
-        padding: 0;
+        padding: 0 16px;
     }
 
     .app__footer-input input {
         min-width: 200px;
+    }
+
+    .app__footer-content {
+        padding: 25px 20px;
     }
 }
